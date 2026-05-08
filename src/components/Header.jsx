@@ -18,8 +18,7 @@ const Header = () => {
         <div className="container">
           <nav className="nav-inner">
             <a href="#home" className="nav-logo">
-              <div className="nav-logo-icon">🛡️</div>
-              <div className="nav-logo-text">HASBU <span>LIMITED</span></div>
+              <img src="/logo.svg" alt="Hasbu Investment Limited" className="nav-logo-img" />
             </a>
 
             <ul className="nav-links">

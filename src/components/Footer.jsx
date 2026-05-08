@@ -8,16 +8,15 @@ const Footer = ({ onShowPrivacy, onShowTerms }) => {
           {/* Brand */}
           <div>
             <div className="footer-logo-text">
-              <span className="logo-icon">🛡️</span>
-              HASBU LIMITED
+              <img src="/logo-white.svg" alt="Hasbu Investment Limited" className="footer-logo-img" />
             </div>
             <p className="footer-desc">
               Leading the way in Integrated Pest Management auditing and compliance for businesses in Nairobi and beyond.
             </p>
             <div className="social-icons" style={{ marginTop: '1.5rem' }}>
-              <a href="https://wa.me/254700000000" className="social-icon" title="WhatsApp" target="_blank" rel="noopener noreferrer">💬</a>
+              <a href="https://wa.me/25406176280" className="social-icon" title="WhatsApp" target="_blank" rel="noopener noreferrer">💬</a>
               <a href="mailto:info@hasbu.co.ke" className="social-icon" title="Email">✉️</a>
-              <a href="tel:+254700000000" className="social-icon" title="Call">📞</a>
+              <a href="tel:+25406176280" className="social-icon" title="Call">📞</a>
             </div>
           </div>
 
