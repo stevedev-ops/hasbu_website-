@@ -18,7 +18,7 @@ const Header = () => {
         <div className="container">
           <nav className="nav-inner">
             <a href="#home" className="nav-logo">
-              <img src="/logo.svg" alt="Hasbu Investment Limited" className="nav-logo-img" />
+              <img src="/logo.png" alt="Hasbu Investment Limited" className="nav-logo-img" />
             </a>
 
             <ul className="nav-links">

@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://hasbu.co.ke/sitemap.xml
+Sitemap: https://www.hasbu.co.ke/sitemap.xml

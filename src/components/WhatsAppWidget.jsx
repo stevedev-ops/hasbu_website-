@@ -1,7 +1,7 @@
 import React from 'react';
 
 const WhatsAppWidget = () => {
-  const phoneNumber = "25406176280"; 
+  const phoneNumber = "254706176280"; 
   const message = "Hello Hasbu Limited, I am interested in an IPM Audit/Certification assistance.";
   
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;

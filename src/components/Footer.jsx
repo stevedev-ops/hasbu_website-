@@ -8,15 +8,15 @@ const Footer = ({ onShowPrivacy, onShowTerms }) => {
           {/* Brand */}
           <div>
             <div className="footer-logo-text">
-              <img src="/logo-white.svg" alt="Hasbu Investment Limited" className="footer-logo-img" />
+              <img src="/logo.png" alt="Hasbu Investment Limited" className="footer-logo-img" />
             </div>
             <p className="footer-desc">
               Leading the way in Integrated Pest Management auditing and compliance for businesses in Nairobi and beyond.
             </p>
             <div className="social-icons" style={{ marginTop: '1.5rem' }}>
-              <a href="https://wa.me/25406176280" className="social-icon" title="WhatsApp" target="_blank" rel="noopener noreferrer">💬</a>
+              <a href="https://wa.me/254706176280" className="social-icon" title="WhatsApp" target="_blank" rel="noopener noreferrer">💬</a>
               <a href="mailto:info@hasbu.co.ke" className="social-icon" title="Email">✉️</a>
-              <a href="tel:+25406176280" className="social-icon" title="Call">📞</a>
+              <a href="tel:+254706176280" className="social-icon" title="Call">📞</a>
             </div>
           </div>
 
@@ -49,7 +49,7 @@ const Footer = ({ onShowPrivacy, onShowTerms }) => {
           <div>
             <div className="footer-col-title">Contact Us</div>
             <div className="footer-links">
-              <a href="tel:+254700000000">📞 +254 700 000 000</a>
+              <a href="tel:+254706176280">📞 +254 706 176280</a>
               <a href="mailto:info@hasbu.co.ke">✉️ info@hasbu.co.ke</a>
               <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.88rem' }}>📍 Nairobi, Kenya</span>
             </div>
