@@ -8,7 +8,7 @@ const Footer = ({ onShowPrivacy, onShowTerms }) => {
           {/* Brand */}
           <div>
             <div className="footer-logo-text">
-              <img src="/logo.png" alt="Hasbu Investment Limited" className="footer-logo-img" />
+              <img src="/logo-footer.png" alt="Hasbu Investment Limited" className="footer-logo-img" />
             </div>
             <p className="footer-desc">
               Leading the way in Integrated Pest Management auditing and compliance for businesses in Nairobi and beyond.
