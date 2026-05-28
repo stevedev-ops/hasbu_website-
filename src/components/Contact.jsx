@@ -2,10 +2,31 @@ import React, { useState } from 'react';
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+
+    const formData = new FormData(e.target);
+    formData.append('_captcha', 'false');
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/info@hasbu.co.ke', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        alert('Oops! There was a problem submitting your form');
+      }
+    } catch (error) {
+      alert('Oops! There was a problem submitting your form');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -73,33 +94,34 @@ const Contact = () => {
               <form onSubmit={handleSubmit}>
                 <div className="form-group form-group-full">
                   <label className="form-label">Full Name</label>
-                  <input className="form-control" type="text" placeholder="John Doe" required />
+                  <input className="form-control" type="text" name="name" placeholder="John Doe" required />
                 </div>
                 <div className="form-row">
                   <div className="form-group">
                     <label className="form-label">Email Address</label>
-                    <input className="form-control" type="email" placeholder="john@example.com" required />
+                    <input className="form-control" type="email" name="email" placeholder="john@example.com" required />
                   </div>
                   <div className="form-group">
                     <label className="form-label">Phone Number</label>
-                    <input className="form-control" type="tel" placeholder="+254 706 176280" required />
+                    <input className="form-control" type="tel" name="phone" placeholder="+254 706 176280" required />
                   </div>
                 </div>
                 <div className="form-group form-group-full">
                   <label className="form-label">Subject</label>
-                  <select className="form-control">
+                  <select className="form-control" name="subject">
                     <option>IPM Audit Booking</option>
                     <option>Nairobi Pay Certification Help</option>
                     <option>Compliance Consultation</option>
+                    <option>Pest Control Services</option>
                     <option>General Inquiry</option>
                   </select>
                 </div>
                 <div className="form-group form-group-full">
                   <label className="form-label">Message</label>
-                  <textarea className="form-control" placeholder="How can we help you?" required></textarea>
+                  <textarea className="form-control" name="message" placeholder="How can we help you?" required></textarea>
                 </div>
-                <button type="submit" className="btn btn-primary btn-submit">
-                  Send Message ✉️
+                <button type="submit" className="btn btn-primary btn-submit" disabled={loading}>
+                  {loading ? 'Sending...' : 'Send Message ✉️'}
                 </button>
               </form>
             )}
